@@ -1,0 +1,38 @@
+﻿@page
+@using LTCSDL_IM91_EF.Models
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<table class="table-bordered table">
+    <tr>
+        <th>
+            Category ID
+        </th>
+        <th>
+            Category Name
+        </th>
+        <th>
+            Category Descripition
+        </th>
+    </tr>
+    @foreach (Category c in Model.lst)
+    {
+        <tr>
+            <td>
+                @c.CategoryId
+            </td>
+            <td>
+                @c.CategoryName
+            </td>
+            <td>
+                @c.Description
+            </td>
+        </tr>
+    }
+</table>
